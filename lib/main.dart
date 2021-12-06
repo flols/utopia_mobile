@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'home/my_home_page.dart';
+import 'home/my_phone_authentication_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -26,7 +30,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: MyPhoneAuthenticationPage(),
     );
   }
 }
