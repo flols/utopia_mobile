@@ -77,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                   controller: passwordController,
                   decoration: textInputDecoration.copyWith(hintText: "Password"),
                   obscureText: true,
-                  validator: (value) => value.length < 4 ? "Enter password with at least 4 characters" : null,
+                  validator: (value) => value != null && value.length < 4 ? "Enter password with at least 4 characters" : null,
                 ),
                 SizedBox(height: 10.0),
                 ElevatedButton(
@@ -86,7 +86,7 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () {
-                    if (_formkey.currentState.validate()) {
+                    if (_formkey.currentState?.validate() == true) {
                       setState(() => loading = true);
                       var password = passwordController.value.text;
                       var email = emailController.value.text;

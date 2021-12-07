@@ -5,11 +5,11 @@ import 'package:utopia_mobile/models/user.dart';
 class Authentication {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  AppUser _userFromFirebaseUser(User user) {
-    return user != null ? AppUser(uid: user.uid) : null;
+  AppUser? _userFromFirebaseUser(User? user) {
+    return user != null ? AppUser(user.uid) : null;
   }
 
-  Stream<AppUser> get user {
+  Stream<AppUser?> get user {
     return _auth.authStateChanges().map(_userFromFirebaseUser);
   }
 
@@ -17,7 +17,7 @@ class Authentication {
     try {
       UserCredential result =
         await _auth.signInWithEmailAndPassword(email: email, password: password);
-      User user = result.user;
+      User? user = result.user;
       return _userFromFirebaseUser(user);
     } catch(exception) {
       print(exception.toString());
@@ -29,7 +29,7 @@ class Authentication {
     try {
       UserCredential result =
         await _auth.createUserWithEmailAndPassword(email: email, password: password);
-      User user = result.user;
+      User? user = result.user;
       return _userFromFirebaseUser(user);
     } catch(exception) {
       print(exception.toString());
