@@ -17,7 +17,7 @@ class MyPhoneAuthenticationPage extends StatefulWidget {
 }
 
 class _MyPhoneAuthenticationPageState extends State<MyPhoneAuthenticationPage> {
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
   final RoundedLoadingButtonController _btnController =
       RoundedLoadingButtonController();
   final TextEditingController phoneNumberController = TextEditingController();
@@ -36,7 +36,7 @@ class _MyPhoneAuthenticationPageState extends State<MyPhoneAuthenticationPage> {
                   height: 20,
                 ),
                 Form(
-                    key: _formKey,
+                    key: _formkey,
                     child: TextFormField(
                       textInputAction: TextInputAction.done,
                       controller: phoneNumberController,
@@ -66,7 +66,7 @@ class _MyPhoneAuthenticationPageState extends State<MyPhoneAuthenticationPage> {
   }
 
   void signUp() async {
-    final FormState? form = _formKey.currentState;
+    final FormState? form = _formkey.currentState;
     if (form!.validate()) {
       Timer(Duration(seconds: 3), () async {
         await FirebaseAuth.instance.setLanguageCode("fr");

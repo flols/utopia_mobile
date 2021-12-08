@@ -22,7 +22,7 @@ class MyOtpVerificationPage extends StatefulWidget {
 
 class _MyOtpVerificationPageState extends State<MyOtpVerificationPage> {
   final TextEditingController otpFieldController = TextEditingController();
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
   final RoundedLoadingButtonController _btnController =
       RoundedLoadingButtonController();
 
@@ -41,7 +41,7 @@ class _MyOtpVerificationPageState extends State<MyOtpVerificationPage> {
                 height: 20,
               ),
               Form(
-                key: _formKey,
+                key: _formkey,
                 child: TextFormField(
                   textInputAction: TextInputAction.done,
                   controller: otpFieldController,
@@ -71,7 +71,7 @@ class _MyOtpVerificationPageState extends State<MyOtpVerificationPage> {
   }
 
   void verifyOtp() async {
-    final FormState? form = _formKey.currentState;
+    final FormState? form = _formkey.currentState;
     if (form!.validate()) {
       //
       PhoneAuthCredential authCredential = PhoneAuthProvider.credential(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:utopia_mobile/shared/widgets/constants.dart';
 import 'package:utopia_mobile/shared/widgets/loading.dart';
 import 'package:utopia_mobile/shared/widgets/palette.dart';
+import 'package:utopia_mobile/shared/widgets/services/authentication.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final Authentication _auth = Authentication();
   final _formkey = GlobalKey<FormState>();
   String error = '';
   bool loading = false;
@@ -56,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                     Icons.person,
                     color: Palette.utopiaColor,
                   ),
-                  label: Text(showSignIn ? 'Sign In' : "Register",
+                  label: Text(showSignIn ? "Register" : 'Sign In',
                       style: TextStyle(color: Palette.utopiaColor)),
                   onPressed: () => toggleView(),
                 ),
@@ -81,8 +83,8 @@ class _LoginPageState extends State<LoginPage> {
                       decoration:
                           textInputDecoration.copyWith(hintText: "Password"),
                       obscureText: true,
-                      validator: (value) => value != null && value.length < 4
-                          ? "Enter password with at least 4 characters"
+                      validator: (value) => value != null && value.length < 6
+                          ? "Enter password with at least 6 characters"
                           : null,
                     ),
                     SizedBox(height: 10.0),
@@ -91,16 +93,18 @@ class _LoginPageState extends State<LoginPage> {
                         showSignIn ? "Sign In" : "Register",
                         style: TextStyle(color: Colors.white),
                       ),
-                      onPressed: () {
+                      onPressed: () async {
                         if (_formkey.currentState?.validate() == true) {
                           setState(() => loading = true);
                           var password = passwordController.value.text;
                           var email = emailController.value.text;
 
-                          dynamic result = null;
+                          dynamic result = showSignIn
+                              ? await _auth.signInWithEmailAndPassword(email, password)
+                              : await _auth.registerWithEmailAndPassword(email, password);
                           if (result == null) {
                             setState(() {
-                              //loading = false;
+                              loading = false;
                               error = 'Please supply a valid email!';
                             });
                           }
