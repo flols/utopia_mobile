@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home/login_page.dart';
 import 'home/my_home_page.dart';
 import 'home/my_phone_authentication_page.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -27,9 +28,9 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.purple,
       ),
-      home: MyPhoneAuthenticationPage(),
+      home: LoginPage(),
     );
   }
 }
