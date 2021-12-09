@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:utopia_mobile/home/utopia_home_page.dart';
 import 'package:utopia_mobile/models/user.dart';
+import 'home_page.dart';
 import 'login_page.dart';
+import 'my_phone_authentication_page.dart';
 
 class SplashScreenWrapper extends StatelessWidget {
   @override
@@ -11,7 +13,8 @@ class SplashScreenWrapper extends StatelessWidget {
     if (user == null) {
       return LoginPage();
     } else {
-      return UtopiaHomePage();
+      return MyPhoneAuthenticationPage();
+      //return HomePage();
     }
   }
 }

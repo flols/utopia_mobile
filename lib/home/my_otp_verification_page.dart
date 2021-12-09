@@ -7,6 +7,7 @@ import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:utopia_mobile/shared/widgets/my_loading_button_widget.dart';
 import 'package:utopia_mobile/home/my_home_page.dart';
 
+import 'home_page.dart';
 import 'my_home_page.dart';
 
 class MyOtpVerificationPage extends StatefulWidget {
@@ -82,7 +83,7 @@ class _MyOtpVerificationPageState extends State<MyOtpVerificationPage> {
         await FirebaseAuth.instance.signInWithCredential(authCredential);
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => MyHomePage()),
+          MaterialPageRoute(builder: (context) => HomePage()),
         );
 
         _btnController.success();
