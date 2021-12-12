@@ -37,8 +37,9 @@ class MyApp extends StatelessWidget {
               .apply(bodyColor: Colors.white),
           canvasColor: secondaryColor,
         ),
-        home: SplashScreenWrapper(),
+        //home: SplashScreenWrapper(),
         //home: HomePage(),
+        home: LoginPage(),
       ),
     );
   }
