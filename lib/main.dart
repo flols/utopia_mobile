@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:utopia_mobile/home/splashscreen_wrapper.dart';
+import 'package:utopia_mobile/shared/widgets/constants.dart';
 import 'package:utopia_mobile/shared/widgets/services/authentication.dart';
+import 'home/home_page.dart';
 import 'home/login_page.dart';
 import 'home/my_home_page.dart';
 import 'home/my_phone_authentication_page.dart';
@@ -25,10 +28,17 @@ class MyApp extends StatelessWidget {
       value: Authentication().user,
       initialData: null,
       child: MaterialApp(
-        home: SplashScreenWrapper(),
-        theme: ThemeData(
-          primarySwatch: Colors.purple,
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark().copyWith(
+          scaffoldBackgroundColor: bgColor,
+          textTheme: GoogleFonts.poppinsTextTheme(Theme
+              .of(context)
+              .textTheme)
+              .apply(bodyColor: Colors.white),
+          canvasColor: secondaryColor,
         ),
+        //home: SplashScreenWrapper(),
+        home: HomePage(),
       ),
     );
   }
