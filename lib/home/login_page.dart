@@ -43,23 +43,23 @@ class _LoginPageState extends State<LoginPage> {
     return loading
         ? Loading()
         : Scaffold(
-            backgroundColor: Palette.back_utopiaColor,
+            backgroundColor: bgColor,
             appBar: AppBar(
-              backgroundColor: Colors.white,
+              backgroundColor: secondaryColor,
               elevation: 0.0,
               title:
                   Text(showSignIn ? 'Sign in to Utopia' : 'Register to Utopia',
                   style: TextStyle(
-                    color: Palette.utopiaColor,
+                    color: primaryColor,
                   ),),
               actions: <Widget>[
                 TextButton.icon(
                   icon: Icon(
                     Icons.person,
-                    color: Palette.utopiaColor,
+                    color: primaryColor,
                   ),
                   label: Text(showSignIn ? "Register" : 'Sign In',
-                      style: TextStyle(color: Palette.utopiaColor)),
+                      style: TextStyle(color: primaryColor)),
                   onPressed: () => toggleView(),
                 ),
               ],
