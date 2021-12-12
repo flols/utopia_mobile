@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
+import 'package:utopia_mobile/shared/widgets/constants.dart';
 
 
 
-class ProjectsListMain extends StatelessWidget {
+class RoadmapListMain extends StatelessWidget {
 
   String ProjectName;
   String ProjectDesc;
-  String ProjectChange;
 
-  ProjectsListMain(ProjectName,ProjectDesc,ProjectChange):ProjectName = ProjectName, ProjectDesc = ProjectDesc, ProjectChange = ProjectChange;
+  RoadmapListMain(ProjectName, ProjectDesc):ProjectName = ProjectName, ProjectDesc = ProjectDesc;
 
 
   @override
@@ -23,13 +22,12 @@ class ProjectsListMain extends StatelessWidget {
       ),
 
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(width: 20,),
+                SizedBox(width: 20),
                 Container(
                   margin: EdgeInsets.only(left: 0, top: 5, right: 0, bottom: 5),
                   child: Column(
@@ -46,20 +44,6 @@ class ProjectsListMain extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-          SizedBox(width: 0,),
-
-
-          SizedBox(width: 50,),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Text(ProjectChange,
-                style: TextStyle(color: primaryColor,
-                  fontSize: 12,
-                ),
-              ),
-            ],
           ),
         ],
       ),
