@@ -1,7 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:utopia_mobile/shared/widgets/constants.dart';
-import 'package:utopia_mobile/shared/widgets/walletPage/chart_info.dart';
+//import 'package:utopia_mobile/shared/widgets/constants.dart';
+//import 'package:utopia_mobile/shared/widgets/walletPage/chart_info.dart';
+import 'package:utopia_mobile/widgets/constants.dart';
+import 'package:utopia_mobile/widgets/walletPage/chart_info.dart';
 
 class WalletPage extends StatefulWidget {
   const WalletPage({Key? key}) : super(key: key);

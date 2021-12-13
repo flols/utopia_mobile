@@ -1,8 +1,12 @@
+// inspiration tutoriel "https://www.youtube.com/watch?v=KQKiZx5N_J0&feature=youtu.be&ab_channel=DavidSilvera"
 import 'package:flutter/material.dart';
-import 'package:utopia_mobile/shared/widgets/constants.dart';
-import 'package:utopia_mobile/shared/widgets/loading.dart';
-import 'package:utopia_mobile/shared/widgets/palette.dart';
-import 'package:utopia_mobile/shared/widgets/services/authentication.dart';
+import 'package:utopia_mobile/widgets/constants.dart';
+import 'package:utopia_mobile/widgets/loading.dart';
+import 'package:utopia_mobile/widgets/services/authentication.dart';
+//import 'package:utopia_mobile/shared/widgets/constants.dart';
+//import 'package:utopia_mobile/shared/widgets/loading.dart';
+//import 'package:utopia_mobile/shared/widgets/palette.dart';
+//import 'package:utopia_mobile/shared/widgets/services/authentication.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);

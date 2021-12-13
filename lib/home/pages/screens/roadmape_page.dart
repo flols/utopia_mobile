@@ -1,7 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:utopia_mobile/shared/widgets/constants.dart';
-import 'package:utopia_mobile/shared/widgets/roadmapPage/RoadmapList.dart';
+//import 'package:utopia_mobile/shared/widgets/constants.dart';
+//import 'package:utopia_mobile/shared/widgets/roadmapPage/RoadmapList.dart';
+import 'package:utopia_mobile/widgets/constants.dart';
+import 'package:utopia_mobile/widgets/roadmapPage/RoadmapList.dart';
 
 
 
@@ -41,7 +43,7 @@ class _RoadmapPageState extends State<RoadmapPage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Padding(padding: EdgeInsets.only(top: 10.0)),
-            RoadmapListMain('10-12-2019', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue sem arcu, nec congue metus venenatis vitae.'),
+            RoadmapListMain('10-12-2019', 'Lorem ipsum dolor sit amet, consectetur .'),
             IconButton(
               icon: Icon(Icons.arrow_circle_down),
               color: textcolor,

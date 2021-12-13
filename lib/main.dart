@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:utopia_mobile/home/splashscreen_wrapper.dart';
-import 'package:utopia_mobile/shared/widgets/constants.dart';
-import 'package:utopia_mobile/shared/widgets/services/authentication.dart';
+import 'package:utopia_mobile/home/email_authentication/splashscreen_wrapper.dart';
+//import 'package:utopia_mobile/shared/widgets/constants.dart';
+//import 'package:utopia_mobile/shared/widgets/services/authentication.dart';
+import 'package:utopia_mobile/widgets/constants.dart';
+import 'package:utopia_mobile/widgets/services/authentication.dart';
 import 'home/home_page.dart';
-import 'home/login_page.dart';
-import 'home/my_home_page.dart';
-import 'home/my_phone_authentication_page.dart';
+import 'home/email_authentication/login_page.dart';
+//import 'home/my_home_page.dart';
+import 'home/phone_authentication/my_phone_authentication_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 import 'models/user.dart';

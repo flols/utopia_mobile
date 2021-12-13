@@ -1,10 +1,15 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:utopia_mobile/shared/widgets/constants.dart';
-import 'package:utopia_mobile/shared/widgets/projectsPage/ProjectsList.dart';
-import 'package:utopia_mobile/shared/widgets/projectsPage/highTitle.dart';
-import 'package:utopia_mobile/shared/widgets/projectsPage/lowTitle.dart';
-import 'package:utopia_mobile/shared/widgets/projectsPage/moderateTitle.dart';
+//import 'package:utopia_mobile/shared/widgets/constants.dart';
+//import 'package:utopia_mobile/shared/widgets/projectsPage/ProjectsList.dart';
+//import 'package:utopia_mobile/shared/widgets/projectsPage/highTitle.dart';
+//import 'package:utopia_mobile/shared/widgets/projectsPage/lowTitle.dart';
+//import 'package:utopia_mobile/shared/widgets/projectsPage/moderateTitle.dart';
+import 'package:utopia_mobile/widgets/constants.dart';
+import 'package:utopia_mobile/widgets/projectsPage/ProjectsList.dart';
+import 'package:utopia_mobile/widgets/projectsPage/highTitle.dart';
+import 'package:utopia_mobile/widgets/projectsPage/lowTitle.dart';
+import 'package:utopia_mobile/widgets/projectsPage/moderateTitle.dart';
 
 
 

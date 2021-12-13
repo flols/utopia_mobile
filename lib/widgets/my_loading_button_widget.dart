@@ -1,7 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
-import 'package:utopia_mobile/shared/widgets/palette.dart';
+import 'package:utopia_mobile/widgets/palette.dart';
+//import 'package:utopia_mobile/shared/widgets/palette.dart';
 
 class MyLoadingButtonWidget extends StatefulWidget {
   Color? color;

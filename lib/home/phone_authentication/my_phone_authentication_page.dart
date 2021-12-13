@@ -4,8 +4,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
-import 'package:utopia_mobile/shared/widgets/my_loading_button_widget.dart';
-import 'package:utopia_mobile/home/my_otp_verification_page.dart';
+//import 'package:utopia_mobile/shared/widgets/my_loading_button_widget.dart';
+import 'package:utopia_mobile/home/phone_authentication/my_otp_verification_page.dart';
+import 'package:utopia_mobile/widgets/my_loading_button_widget.dart';
 
 
 class MyPhoneAuthenticationPage extends StatefulWidget {
@@ -31,7 +32,7 @@ class _MyPhoneAuthenticationPageState extends State<MyPhoneAuthenticationPage> {
             padding: const EdgeInsets.all(10.0),
             child: Column(
               children: [
-                Text("Bonjour"),
+                Text("Authentification à Utopia"),
                 SizedBox(
                   height: 20,
                 ),

@@ -1,9 +1,15 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:utopia_mobile/shared/widgets/constants.dart';
-import 'package:utopia_mobile/shared/widgets/mainPage/CryptoList.dart';
-import 'package:utopia_mobile/shared/widgets/mainPage/marketPlaceFilterWidget.dart';
-import 'package:utopia_mobile/shared/widgets/mainPage/marketPlaceTitleWidget.dart';
+//import 'package:utopia_mobile/shared/widgets/constants.dart';
+//import 'package:utopia_mobile/shared/widgets/mainPage/CryptoList.dart';
+//import 'package:utopia_mobile/shared/widgets/mainPage/marketPlaceFilterWidget.dart';
+//import 'package:utopia_mobile/shared/widgets/mainPage/marketPlaceTitleWidget.dart';
+import 'package:utopia_mobile/widgets/constants.dart';
+import 'package:utopia_mobile/widgets/mainPage/CryptoList.dart';
+import 'package:utopia_mobile/widgets/mainPage/marketPlaceFilterWidget.dart';
+import 'package:utopia_mobile/widgets/mainPage/marketPlaceTitleWidget.dart';
+
+import '../../email_authentication/login_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);

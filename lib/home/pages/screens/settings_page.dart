@@ -1,9 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:utopia_mobile/shared/widgets/constants.dart';
-import 'package:utopia_mobile/shared/widgets/settingPage/bottomBorderWidget.dart';
-import 'package:utopia_mobile/shared/widgets/settingPage/settingsListWidget.dart';
-import 'package:utopia_mobile/shared/widgets/settingPage/verifiedWidget.dart';
+//import 'package:utopia_mobile/shared/widgets/constants.dart';
+//import 'package:utopia_mobile/shared/widgets/settingPage/bottomBorderWidget.dart';
+//import 'package:utopia_mobile/shared/widgets/settingPage/settingsListWidget.dart';
+//import 'package:utopia_mobile/shared/widgets/settingPage/verifiedWidget.dart';
+import 'package:utopia_mobile/widgets/constants.dart';
+import 'package:utopia_mobile/widgets/settingPage/bottomBorderWidget.dart';
+import 'package:utopia_mobile/widgets/settingPage/settingsListWidget.dart';
+import 'package:utopia_mobile/widgets/settingPage/verifiedWidget.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:utopia_mobile/shared/widgets/palette.dart';
+//import 'package:utopia_mobile/shared/widgets/palette.dart';
 
 import 'constants.dart';
 

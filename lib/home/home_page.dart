@@ -4,8 +4,10 @@ import 'package:utopia_mobile/home/pages/screens/projects_page.dart';
 import 'package:utopia_mobile/home/pages/screens/roadmape_page.dart';
 import 'package:utopia_mobile/home/pages/screens/settings_page.dart';
 import 'package:utopia_mobile/home/pages/screens/wallet_page.dart';
-import 'package:utopia_mobile/shared/widgets/constants.dart';
-import 'package:utopia_mobile/shared/widgets/services/authentication.dart';
+//import 'package:utopia_mobile/shared/widgets/constants.dart';
+//import 'package:utopia_mobile/shared/widgets/services/authentication.dart';
+import 'package:utopia_mobile/widgets/constants.dart';
+import 'package:utopia_mobile/widgets/services/authentication.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

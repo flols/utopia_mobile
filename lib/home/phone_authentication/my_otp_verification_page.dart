@@ -4,11 +4,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
-import 'package:utopia_mobile/shared/widgets/my_loading_button_widget.dart';
-import 'package:utopia_mobile/home/my_home_page.dart';
+//import 'package:utopia_mobile/shared/widgets/my_loading_button_widget.dart';
+//import 'package:utopia_mobile/home/my_home_page.dart';
+import 'package:utopia_mobile/widgets/my_loading_button_widget.dart';
 
-import 'home_page.dart';
-import 'my_home_page.dart';
+import '../home_page.dart';
+//import '../my_home_page.dart';
 
 class MyOtpVerificationPage extends StatefulWidget {
   String numberPhone;
