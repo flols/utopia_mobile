@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:utopia_mobile/shared/widgets/constants.dart';
 import 'package:utopia_mobile/shared/widgets/settingPage/bottomBorderWidget.dart';
@@ -12,6 +13,7 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +24,9 @@ class _SettingsPageState extends State<SettingsPage> {
           IconButton(
             icon: Icon(Icons.logout),
             color: textcolor,
-            onPressed: (){},
+            onPressed: () async{
+              await _auth.signOut();
+            },
           ),
           IconButton(
             icon: Icon(Icons.account_circle),

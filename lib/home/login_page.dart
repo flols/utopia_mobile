@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
               backgroundColor: secondaryColor,
               elevation: 0.0,
               title:
-                  Text(showSignIn ? 'Sign in to Utopia' : 'Register to Utopia',
+                  Text(showSignIn ? 'Connectez-vous' : 'Enregistrez-vous',
                   style: TextStyle(
                     color: primaryColor,
                   ),),
@@ -58,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                     Icons.person,
                     color: primaryColor,
                   ),
-                  label: Text(showSignIn ? "Register" : 'Sign In',
+                  label: Text(showSignIn ? "Enregistrement" : 'Connexion',
                       style: TextStyle(color: primaryColor)),
                   onPressed: () => toggleView(),
                 ),
@@ -75,22 +75,22 @@ class _LoginPageState extends State<LoginPage> {
                       decoration:
                           textInputDecoration.copyWith(hintText: "Email"),
                       validator: (value) =>
-                          value!.isEmpty ? "Enter an email" : null,
+                          value!.isEmpty ? "Entrer un email" : null,
                     ),
                     SizedBox(height: 10.0),
                     TextFormField(
                       controller: passwordController,
                       decoration:
-                          textInputDecoration.copyWith(hintText: "Password"),
+                          textInputDecoration.copyWith(hintText: "Mot de passe"),
                       obscureText: true,
                       validator: (value) => value != null && value.length < 6
-                          ? "Enter password with at least 6 characters"
+                          ? "Entrer un mot de passe avec plus de 6 lettres"
                           : null,
                     ),
                     SizedBox(height: 10.0),
                     ElevatedButton(
                       child: Text(
-                        showSignIn ? "Sign In" : "Register",
+                        showSignIn ? "Connexion" : "Enregistrement",
                         style: TextStyle(color: Colors.white),
                       ),
                       onPressed: () async {
@@ -105,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                           if (result == null) {
                             setState(() {
                               loading = false;
-                              error = 'Please supply a valid email!';
+                              error = 'Merci de rentrer une adresse valide!';
                             });
                           }
                         }
