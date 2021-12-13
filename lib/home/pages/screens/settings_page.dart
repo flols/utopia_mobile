@@ -37,7 +37,7 @@ class _SettingsPageState extends State<SettingsPage> {
       ),
 
       backgroundColor: Color(0xF5F6FA),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [

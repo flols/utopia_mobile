@@ -13,8 +13,8 @@ class SplashScreenWrapper extends StatelessWidget {
     if (user == null) {
       return LoginPage();
     } else {
-      //return MyPhoneAuthenticationPage();
-      return HomePage();
+      return MyPhoneAuthenticationPage();
+      //return HomePage();
     }
   }
 }
